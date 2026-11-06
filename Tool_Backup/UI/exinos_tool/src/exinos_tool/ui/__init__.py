@@ -1,0 +1,1 @@
+"""Qt-Oberflaeche (Schicht 5, PySide6). Enthaelt keine Fachlogik."""

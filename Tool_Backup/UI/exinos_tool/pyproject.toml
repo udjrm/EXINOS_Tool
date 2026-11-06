@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exinos_tool"
+version = "1.0.0"
+description = "Werkzeug zur grafischen Erstellung von Bahnverarbeitungsanlagen"
+dependencies = [
+    "pyside6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+ui = [
+    "pyside6",
+]
+
+[project.scripts]
+exinos-tool = "exinos_tool.cli:main"
+exinos-ui = "exinos_tool.ui.app:main"
+
+[tool.setuptools]
+packages = ["exinos_tool"]
+package-dir = {"" = "src"}

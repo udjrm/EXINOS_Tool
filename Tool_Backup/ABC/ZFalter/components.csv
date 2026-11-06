@@ -1,0 +1,27 @@
+id;typ;bezeichnung;materialpfad;baugruppe;gestellfest;bemerkung
+Separator;materialbahn;Separatorbahn;Se;;;
+Abwickler;abwickler;Abwickler inkl. Coil;Se;Abwicklung;ja;Radius- und Geschwindigkeitssensor im Submodell
+Antrieb_Abw;antrieb;Antrieb Abwickler;Se;Abwicklung;ja;Drehzahlregelung mit Encoder
+Riementrieb_Abw;riementrieb;Zahnriementrieb Abwickler;Se;Abwicklung;ja;zwei Scheiben und zwei Riemensegmente
+Regler_Abw;regler;Steuerung Abwickler;Se;Abwicklung;;Auf- und Abwickeln nach Taenzerwinkel und Tischposition
+Rolle_1;umlenkrolle;Umlenkrolle 1;Se;;ja;
+Rolle_2;umlenkrolle;Umlenkrolle 2;Se;;ja;
+Rolle_3;taenzerwalze;Taenzerrolle oben;Se;Taenzer;nein;obere Rolle am Schwenkarm
+Rolle_4;umlenkrolle;Umlenkrolle 4;Se;;ja;
+Rolle_5;taenzerwalze;Taenzerrolle unten;Se;Taenzer;nein;untere Rolle am Schwenkarm
+Rolle_6;umlenkrolle;Umlenkrolle 6;Se;;ja;
+Rolle_7;umlenkrolle;Umlenkrolle 7;Se;;ja;
+Rolle_8;umlenkrolle;Umlenkrolle 8;Se;;ja;
+Rolle_9;umlenkrolle;Umlenkrolle 9;Se;;ja;
+Auslaufrolle;umlenkrolle;Auslaufrolle;Se;Outfeed;ja;Doppelrolle mit eigener Traegheit
+Taenzerhebel;schwenkarm;Taenzerarm rotatorisch;Se;Taenzer;ja;traegt zwei Rollen - Endanschlaege -12 bis 55 Grad
+Taenzerzylinder;druckluftzylinder;Druckluftzylinder Taenzer;Se;Taenzer;ja;konstanter Druck ohne Regelventil
+Drehgeber_Taenzer;drehgeber;Drehgeber Taenzer;Se;Taenzer;;
+Stapeltisch;stapeltisch;Stapeltisch x-translatorisch;Se;Tisch;nein;Starrkoerper mit Stapelhoehen- und Massenrechnung
+Antrieb_Tisch;antrieb;Antrieb Stapeltisch;Se;Tisch;ja;Lageregelung mit Profil dritter Ordnung
+Spindel_Tisch;spindel;Kugelgewinde Stapeltisch;Se;Tisch;ja;im Modell nur als Wirkungsgrad hinterlegt
+Fuehrung_Tisch;linearfuehrung;Linearfuehrung Stapeltisch;Se;Tisch;ja;inkl. Reibmodell
+Wegaufnehmer_Tisch;wegaufnehmer;Lagemesssystem Stapeltisch;Se;Tisch;;
+Klemmrolle;klemmrolle;Tischgreifer Klemmrolle;Se;Tisch;nein;kinematisch vorgegeben
+Kontaktrolle;klemmrolle;Kontaktrolle;Se;Tisch;nein;kinematisch vorgegeben
+Taktgeber;regler;Maschinensteuerung Takt und Ablauf;Se;Steuerung;;Masterclock 14 s und zwei Statecharts

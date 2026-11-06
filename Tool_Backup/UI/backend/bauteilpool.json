@@ -1,0 +1,144 @@
+{
+  "version": "1.3",
+  "verbindungsarten": {
+    "bahn":      {"domaene": "rope",      "gerichtet": false, "rolle_layout": "spur",           "bezeichnung": "Materialbahn"},
+    "welle":     {"domaene": "rotary",    "gerichtet": false, "rolle_layout": "struktur",       "bezeichnung": "Drehmomentuebertragung"},
+    "lage":      {"domaene": "planar",    "gerichtet": false, "rolle_layout": "nach_port_rolle",
+                  "rolle_layout_map": {"leistung": "struktur", "messung": "anker_seitlich"},
+                  "rolle_layout_default": "leistung",
+                  "bezeichnung": "Lagerung, Fuehrung, Lagemessung"},
+    "pneumatik": {"domaene": "pneumatik", "gerichtet": false, "rolle_layout": "struktur",       "bezeichnung": "Druckluft"},
+    "vakuum":    {"domaene": "vakuum",    "gerichtet": false, "rolle_layout": "struktur",       "bezeichnung": "Unterdruck"},
+    "material":  {"domaene": "material",  "gerichtet": false, "rolle_layout": "anker_spur",     "bezeichnung": "Uebergabe von Einzelblaettern"},
+    "signal":    {"domaene": "control",   "gerichtet": true,  "rolle_layout": "anker_seitlich", "bezeichnung": "Mess- oder Steuersignal"}
+  },
+  "typen": [
+    {"typ": "materialbahn", "bezeichnung": "Materialbahn", "kurz": "Bahn",
+     "kategorie": "Bahn", "platzierbar": false, "ports": []},
+    {"typ": "rahmen", "bezeichnung": "Maschinenrahmen (implizit)", "kurz": "Rahmen",
+     "kategorie": "intern", "platzierbar": false, "ports": []},
+    {"typ": "umlenkrolle", "bezeichnung": "Umlenkrolle", "kurz": "Umlenkrolle",
+     "kategorie": "Bahnfuehrung", "gestellfest_standard": true, "ports": [
+      {"name": "bahn_ein", "art": "bahn", "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "bahn_aus", "art": "bahn", "richtung": "aus", "max": 1, "pflicht": true}]},
+    {"typ": "messwalze", "bezeichnung": "Messwalze (Bahnzug)", "kurz": "Messwalze",
+     "kategorie": "Bahnfuehrung", "gestellfest_standard": true, "ports": [
+      {"name": "bahn_ein",   "art": "bahn",   "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "bahn_aus",   "art": "bahn",   "richtung": "aus", "max": 1,    "pflicht": true},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": false}]},
+    {"typ": "taenzerwalze", "bezeichnung": "Taenzerwalze", "kurz": "Taenzerwalze",
+     "kategorie": "Bahnfuehrung", "gestellfest_standard": false, "ports": [
+      {"name": "bahn_ein", "art": "bahn", "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "bahn_aus", "art": "bahn", "richtung": "aus", "max": 1, "pflicht": true},
+      {"name": "lager",    "art": "lage", "richtung": "ein", "max": 1, "pflicht": true, "rolle": "leistung"}]},
+    {"typ": "faltwalze", "bezeichnung": "Faltwalze", "kurz": "Faltwalze",
+     "kategorie": "Bahnfuehrung", "gestellfest_standard": false, "ports": [
+      {"name": "bahn_ein",   "art": "bahn",   "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "bahn_aus",   "art": "bahn",   "richtung": "aus", "max": 1, "pflicht": true},
+      {"name": "signal_ein", "art": "signal", "richtung": "ein", "max": 1, "pflicht": true}]},
+    {"typ": "drehrahmen", "bezeichnung": "Drehrahmen (Bahnkantenregelung)", "kurz": "Drehrahmen",
+     "kategorie": "Bahnfuehrung", "gestellfest_standard": true, "ports": [
+      {"name": "bahn_ein", "art": "bahn", "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "bahn_aus", "art": "bahn", "richtung": "aus", "max": 1, "pflicht": true},
+      {"name": "lager",    "art": "lage", "richtung": "ein", "max": 1, "pflicht": true, "rolle": "leistung"}]},
+    {"typ": "klemmrolle", "bezeichnung": "Klemm- oder Kontaktrolle", "kurz": "Klemmrolle",
+     "kategorie": "Bahnfuehrung", "gestellfest_standard": false, "ports": [
+      {"name": "lager",      "art": "lage",   "richtung": "ein", "max": 1, "pflicht": true, "rolle": "leistung"},
+      {"name": "signal_ein", "art": "signal", "richtung": "ein", "max": 1, "pflicht": true}]},
+    {"typ": "abwickler", "bezeichnung": "Abwickler inkl. Coil", "kurz": "Abwickler",
+     "kategorie": "Wickeln und Handhaben", "gestellfest_standard": true, "ports": [
+      {"name": "bahn_aus",   "art": "bahn",   "richtung": "aus", "max": 1,    "pflicht": true},
+      {"name": "welle_an",   "art": "welle",  "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": false}]},
+    {"typ": "handhabungssystem", "bezeichnung": "Handhabungssystem inkl. Grundplatte", "kurz": "Handhabung",
+     "kategorie": "Wickeln und Handhaben", "gestellfest_standard": false, "ports": [
+      {"name": "bahn_ein",   "art": "bahn",   "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "welle_an",   "art": "welle",  "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "lager",      "art": "lage",   "richtung": "ein", "max": 1,    "pflicht": true,  "rolle": "leistung"},
+      {"name": "messung",    "art": "lage",   "richtung": "aus", "max": 1,    "pflicht": false, "rolle": "messung"},
+      {"name": "traeger",    "art": "lage",   "richtung": "aus", "max": null, "pflicht": false, "rolle": "leistung"},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": true}]},
+    {"typ": "falteinheit", "bezeichnung": "Falteinheit", "kurz": "Falteinheit",
+     "kategorie": "Wickeln und Handhaben", "gestellfest_standard": false, "ports": [
+      {"name": "bahn_ein",   "art": "bahn",   "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "welle_an",   "art": "welle",  "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": true}]},
+    {"typ": "vakuumgreifer", "bezeichnung": "Vakuumgreifer", "kurz": "Vakuumgreifer",
+     "kategorie": "Wickeln und Handhaben", "gestellfest_standard": false, "ports": [
+      {"name": "lage_an",      "art": "lage",     "richtung": "ein", "max": 1, "pflicht": true, "rolle": "leistung"},
+      {"name": "vakuum_ein",   "art": "vakuum",   "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "material_aus", "art": "material", "richtung": "aus", "max": 1, "pflicht": false}]},
+    {"typ": "ablegetisch", "bezeichnung": "Ablegetisch (Einzelblaetter)", "kurz": "Ablegetisch",
+     "kategorie": "Wickeln und Handhaben", "gestellfest_standard": false, "ports": [
+      {"name": "lager",        "art": "lage",     "richtung": "ein", "max": null, "pflicht": true, "rolle": "leistung"},
+      {"name": "material_ein", "art": "material", "richtung": "ein", "max": null, "pflicht": false}]},
+    {"typ": "stapeltisch", "bezeichnung": "Stapeltisch (laufende Bahn)", "kurz": "Stapeltisch",
+     "kategorie": "Wickeln und Handhaben", "gestellfest_standard": false, "ports": [
+      {"name": "bahn_ein",   "art": "bahn",   "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "lager",      "art": "lage",   "richtung": "ein", "max": null, "pflicht": true,  "rolle": "leistung"},
+      {"name": "traeger",    "art": "lage",   "richtung": "aus", "max": null, "pflicht": false, "rolle": "leistung"},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": false}]},
+    {"typ": "antrieb", "bezeichnung": "Servoantrieb (Regler, Motor, Motorgeber)", "kurz": "Antrieb",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": true, "ports": [
+      {"name": "welle_ab",     "art": "welle",  "richtung": "aus", "max": 1, "pflicht": true},
+      {"name": "sollwert",     "art": "signal", "richtung": "ein", "max": 1, "pflicht": false},
+      {"name": "istwert",      "art": "signal", "richtung": "ein", "max": 1, "pflicht": false},
+      {"name": "vorsteuerung", "art": "signal", "richtung": "ein", "max": 1, "pflicht": false}]},
+    {"typ": "riementrieb", "bezeichnung": "Riementrieb", "kurz": "Riementrieb",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": true, "ports": [
+      {"name": "welle_an", "art": "welle", "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "welle_ab", "art": "welle", "richtung": "aus", "max": 1, "pflicht": true}]},
+    {"typ": "spindel", "bezeichnung": "Spindel (Kugelgewindetrieb)", "kurz": "Spindel",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": true, "ports": [
+      {"name": "welle_an", "art": "welle", "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "lage_ab",  "art": "lage",  "richtung": "aus", "max": null, "pflicht": true, "rolle": "leistung"}]},
+    {"typ": "linearfuehrung", "bezeichnung": "Linearfuehrung inkl. Schlitten", "kurz": "Linearfuehrung",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": true, "ports": [
+      {"name": "lage_an", "art": "lage", "richtung": "ein", "max": 1,    "pflicht": true,  "rolle": "leistung"},
+      {"name": "lage_ab", "art": "lage", "richtung": "aus", "max": null, "pflicht": true,  "rolle": "leistung"},
+      {"name": "messung", "art": "lage", "richtung": "aus", "max": 1,    "pflicht": false, "rolle": "messung"}]},
+    {"typ": "lineareinheit", "bezeichnung": "Lineareinheit (Achse inkl. Fuehrung und Uebertragung)", "kurz": "Lineareinheit",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": false, "ports": [
+      {"name": "welle_an", "art": "welle", "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "lager",    "art": "lage",  "richtung": "ein", "max": 1,    "pflicht": false, "rolle": "leistung"},
+      {"name": "lage_ab",  "art": "lage",  "richtung": "aus", "max": null, "pflicht": true,  "rolle": "leistung"}]},
+    {"typ": "schwenkarm", "bezeichnung": "Taenzerhebel / Rotationseinheit", "kurz": "Schwenkarm",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": true, "ports": [
+      {"name": "lage_an", "art": "lage", "richtung": "ein", "max": 1,    "pflicht": true, "rolle": "leistung"},
+      {"name": "lage_ab", "art": "lage", "richtung": "aus", "max": null, "pflicht": true, "rolle": "leistung"},
+      {"name": "messung", "art": "lage", "richtung": "aus", "max": 1,    "pflicht": true, "rolle": "messung"}]},
+    {"typ": "stellantrieb", "bezeichnung": "Stellantrieb (linear, inkl. Regelung)", "kurz": "Stellantrieb",
+     "kategorie": "Antriebstechnik", "gestellfest_standard": true, "ports": [
+      {"name": "signal_ein", "art": "signal", "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "lage_ab",    "art": "lage",   "richtung": "aus", "max": null, "pflicht": true, "rolle": "leistung"}]},
+    {"typ": "druckluftzylinder", "bezeichnung": "Druckluftzylinder", "kurz": "Zylinder",
+     "kategorie": "Pneumatik und Vakuum", "gestellfest_standard": true, "ports": [
+      {"name": "druck_ein", "art": "pneumatik", "richtung": "ein", "max": 1,    "pflicht": false},
+      {"name": "kraft",     "art": "lage",      "richtung": "aus", "max": null, "pflicht": true, "rolle": "leistung"}]},
+    {"typ": "regelventil", "bezeichnung": "Proportional-Regelventil", "kurz": "Regelventil",
+     "kategorie": "Pneumatik und Vakuum", "gestellfest_standard": false, "ports": [
+      {"name": "signal_ein", "art": "signal",    "richtung": "ein", "max": 1, "pflicht": true},
+      {"name": "druck_aus",  "art": "pneumatik", "richtung": "aus", "max": 1, "pflicht": true}]},
+    {"typ": "vakuumerzeuger", "bezeichnung": "Vakuumerzeuger", "kurz": "Vakuumerzeuger",
+     "kategorie": "Pneumatik und Vakuum", "gestellfest_standard": true, "ports": [
+      {"name": "vakuum_aus", "art": "vakuum", "richtung": "aus", "max": 1, "pflicht": true},
+      {"name": "signal_ein", "art": "signal", "richtung": "ein", "max": 1, "pflicht": false}]},
+    {"typ": "drehgeber", "bezeichnung": "Drehgeber (Prozess)", "kurz": "Drehgeber",
+     "kategorie": "Sensorik und Steuerung", "gestellfest_standard": false, "ports": [
+      {"name": "messung",    "art": "lage",   "richtung": "ein", "max": 1,    "pflicht": true, "rolle": "messung"},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": true}]},
+    {"typ": "wegaufnehmer", "bezeichnung": "Wegaufnehmer / Lagemesssystem", "kurz": "Wegaufnehmer",
+     "kategorie": "Sensorik und Steuerung", "gestellfest_standard": false, "ports": [
+      {"name": "messung",    "art": "lage",   "richtung": "ein", "max": 1,    "pflicht": true, "rolle": "messung"},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": true}]},
+    {"typ": "bahnkantensensor", "bezeichnung": "Bahnkantensensor", "kurz": "Bahnkantensensor",
+     "kategorie": "Sensorik und Steuerung", "gestellfest_standard": true, "ports": [
+      {"name": "bahn_ein",   "art": "bahn",   "richtung": "ein", "max": 1,    "pflicht": true},
+      {"name": "bahn_aus",   "art": "bahn",   "richtung": "aus", "max": 1,    "pflicht": true},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": true}]},
+    {"typ": "regler", "bezeichnung": "Regler, Steuerung oder Taktgeber", "kurz": "Regler",
+     "kategorie": "Sensorik und Steuerung", "gestellfest_standard": false, "ports": [
+      {"name": "signal_ein", "art": "signal", "richtung": "ein", "max": null, "pflicht": false},
+      {"name": "signal_aus", "art": "signal", "richtung": "aus", "max": null, "pflicht": true}]}
+  ]
+}

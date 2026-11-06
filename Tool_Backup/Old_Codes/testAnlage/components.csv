@@ -1,0 +1,6 @@
+id;typ;bezeichnung;materialpfad;baugruppe;gestellfest;bemerkung
+Bahn1;materialbahn;Anode;An;;;
+Antrieb_1;antrieb;;;;;
+Abwickler_1;abwickler;;;;;
+Regler_1;regler;;;;;
+Umlenkrolle_1;umlenkrolle;;;;;

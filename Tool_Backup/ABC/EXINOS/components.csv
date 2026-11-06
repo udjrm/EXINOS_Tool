@@ -1,0 +1,56 @@
+id;typ;bezeichnung;materialpfad;baugruppe;gestellfest;bemerkung
+Anode;materialbahn;Anodenbahn (Kupfer);An;;;
+An_Abwickler;abwickler;Abwickler Anode inkl. Coil;An;Abwicklung_An;ja;
+An_Antrieb_Abw;antrieb;Antrieb Abwickler Anode;An;Abwicklung_An;ja;Drehzahlregelung
+An_Riementrieb_Abw;riementrieb;Riementrieb Abwickler Anode;An;Abwicklung_An;ja;
+An_Rolle_1;umlenkrolle;Umlenkrolle 1 Anode;An;;ja;
+An_Rolle_2;umlenkrolle;Umlenkrolle 2 Anode;An;;ja;
+An_Rolle_3;umlenkrolle;Umlenkrolle 3 Anode;An;;ja;
+An_Rolle_4;umlenkrolle;Umlenkrolle 4 Anode;An;;ja;
+An_Rolle_5;umlenkrolle;Umlenkrolle 5 Anode;An;;ja;
+An_Rolle_6;umlenkrolle;Umlenkrolle 6 Anode;An;;ja;
+An_Messwalze;messwalze;Messwalze Anode;An;;ja;Messsignal im Prototyp ungenutzt (signalsink)
+An_Taenzerwalze;taenzerwalze;Tänzerwalze Anode;An;Taenzer_An;nein;
+An_Taenzerhebel;schwenkarm;Tänzerhebel Anode;An;Taenzer_An;ja;
+An_Taenzerzylinder;druckluftzylinder;Druckluftzylinder Tänzer Anode;An;Taenzer_An;ja;Annahme - Innenleben ROT_MOTION prüfen
+An_Drehgeber_Taenzer;drehgeber;Drehgeber Tänzer Anode;An;Taenzer_An;;
+An_Handhabung;handhabungssystem;Handhabungssystem Anode;An;Handhabung_An;nein;
+An_Antrieb_Handh;antrieb;Antrieb Handhabung Rotation Anode;An;Handhabung_An;ja;Lageregelung
+An_Riementrieb_Handh;riementrieb;Riementrieb Handhabung Anode;An;Handhabung_An;ja;
+An_Antrieb_Hub;antrieb;Antrieb Hubachse Anode;An;Hubachse_An;ja;Lageregelung
+An_Spindel_Hub;spindel;Spindel Hubachse Anode;An;Hubachse_An;ja;
+An_Fuehrung_Hub;linearfuehrung;Linearführung Hubachse Anode;An;Hubachse_An;ja;
+Kathode;materialbahn;Kathodenbahn (Aluminium);Ka;;;
+Ka_Abwickler;abwickler;Abwickler Kathode inkl. Coil;Ka;Abwicklung_Ka;ja;
+Ka_Antrieb_Abw;antrieb;Antrieb Abwickler Kathode;Ka;Abwicklung_Ka;ja;Drehzahlregelung
+Ka_Riementrieb_Abw;riementrieb;Riementrieb Abwickler Kathode;Ka;Abwicklung_Ka;ja;
+Ka_Rolle_1;umlenkrolle;Umlenkrolle 1 Kathode;Ka;;ja;
+Ka_Rolle_2;umlenkrolle;Umlenkrolle 2 Kathode;Ka;;ja;
+Ka_Rolle_3;umlenkrolle;Umlenkrolle 3 Kathode;Ka;;ja;
+Ka_Rolle_4;umlenkrolle;Umlenkrolle 4 Kathode;Ka;;ja;
+Ka_Rolle_5;umlenkrolle;Umlenkrolle 5 Kathode;Ka;;ja;
+Ka_Rolle_6;umlenkrolle;Umlenkrolle 6 Kathode;Ka;;ja;
+Ka_Messwalze;messwalze;Messwalze Kathode;Ka;;ja;Messsignal im Prototyp ungenutzt (signalsink)
+Ka_Taenzerwalze;taenzerwalze;Tänzerwalze Kathode;Ka;Taenzer_Ka;nein;
+Ka_Taenzerhebel;schwenkarm;Tänzerhebel Kathode;Ka;Taenzer_Ka;ja;
+Ka_Taenzerzylinder;druckluftzylinder;Druckluftzylinder Tänzer Kathode;Ka;Taenzer_Ka;ja;Annahme - Innenleben ROT_MOTION prüfen
+Ka_Drehgeber_Taenzer;drehgeber;Drehgeber Tänzer Kathode;Ka;Taenzer_Ka;;
+Ka_Handhabung;handhabungssystem;Handhabungssystem Kathode;Ka;Handhabung_Ka;nein;
+Ka_Antrieb_Handh;antrieb;Antrieb Handhabung Rotation Kathode;Ka;Handhabung_Ka;ja;Lageregelung
+Ka_Riementrieb_Handh;riementrieb;Riementrieb Handhabung Kathode;Ka;Handhabung_Ka;ja;
+Ka_Antrieb_Hub;antrieb;Antrieb Hubachse Kathode;Ka;Hubachse_Ka;ja;Lageregelung
+Ka_Spindel_Hub;spindel;Spindel Hubachse Kathode;Ka;Hubachse_Ka;ja;
+Ka_Fuehrung_Hub;linearfuehrung;Linearführung Hubachse Kathode;Ka;Hubachse_Ka;ja;
+Separator;materialbahn;Separatorbahn;Se;;;
+Se_Abwickler;abwickler;Abwickler Separator inkl. Coil;Se;Abwicklung_Se;ja;Taktgeber für Handhabung An/Ka
+Se_Antrieb_Abw;antrieb;Antrieb Abwickler Separator;Se;Abwicklung_Se;ja;Drehzahlregelung
+Se_Riementrieb_Abw;riementrieb;Riementrieb Abwickler Separator;Se;Abwicklung_Se;ja;
+Se_Rolle_1;umlenkrolle;Umlenkrolle 1 Separator;Se;;ja;
+Se_Rolle_2;umlenkrolle;Umlenkrolle 2 Separator;Se;;ja;
+Se_Rolle_3;umlenkrolle;Umlenkrolle 3 Separator;Se;;ja;
+Se_Rolle_4;umlenkrolle;Umlenkrolle 4 Separator;Se;;ja;
+Se_Messwalze;messwalze;Messwalze Separator;Se;;ja;Bahnzugregelung
+Se_Faltwalze;faltwalze;Faltwalze;Se;Faltung;nein;Bewegung ideal vorgegeben
+Se_Falteinheit;falteinheit;Falteinheit;Se;Faltung;nein;Bewegung ideal vorgegeben - Zuordnung prüfen
+Se_Antrieb_Falt;antrieb;Antrieb Falteinheit;Se;Faltung;ja;konstanter Sollwert
+Se_Riementrieb_Falt;riementrieb;Riementrieb Falteinheit;Se;Faltung;ja;

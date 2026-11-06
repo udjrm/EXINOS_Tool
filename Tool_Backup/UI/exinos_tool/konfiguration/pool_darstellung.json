@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "typen": {
+    "umlenkrolle": {
+      "symbol": "umlenkrolle.svg"
+    },
+    "messwalze": {
+      "symbol": "messwalze.svg"
+    },
+    "taenzerwalze": {
+      "symbol": "taenzerwalze.svg"
+    },
+    "faltwalze": {
+      "symbol": "faltwalze.svg"
+    },
+    "drehrahmen": {
+      "symbol": "drehrahmen.svg"
+    },
+    "klemmrolle": {
+      "symbol": "klemmrolle.svg"
+    },
+    "abwickler": {
+      "symbol": "abwickler.svg"
+    },
+    "handhabungssystem": {
+      "symbol": "handhabungssystem.svg"
+    },
+    "falteinheit": {
+      "symbol": "falteinheit.svg"
+    },
+    "vakuumgreifer": {
+      "symbol": "vakuumgreifer.svg"
+    },
+    "ablegetisch": {
+      "symbol": "ablegetisch.svg"
+    },
+    "stapeltisch": {
+      "symbol": "stapeltisch.svg"
+    },
+    "antrieb": {
+      "symbol": "antrieb.svg"
+    },
+    "riementrieb": {
+      "symbol": "riementrieb.svg"
+    },
+    "spindel": {
+      "symbol": "spindel.svg"
+    },
+    "linearfuehrung": {
+      "symbol": "linearfuehrung.svg"
+    },
+    "lineareinheit": {
+      "symbol": "lineareinheit.svg"
+    },
+    "schwenkarm": {
+      "symbol": "schwenkarm.svg"
+    },
+    "stellantrieb": {
+      "symbol": "stellantrieb.svg"
+    },
+    "druckluftzylinder": {
+      "symbol": "druckluftzylinder.svg"
+    },
+    "regelventil": {
+      "symbol": "regelventil.svg"
+    },
+    "vakuumerzeuger": {
+      "symbol": "vakuumerzeuger.svg"
+    },
+    "drehgeber": {
+      "symbol": "drehgeber.svg"
+    },
+    "wegaufnehmer": {
+      "symbol": "wegaufnehmer.svg"
+    },
+    "bahnkantensensor": {
+      "symbol": "bahnkantensensor.svg"
+    },
+    "regler": {
+      "symbol": "regler.svg"
+    }
+  }
+}

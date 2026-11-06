@@ -1,0 +1,72 @@
+typ;pfad;funktion;ST_BZ;ST_BF;ST_PG;ST_PT;VE_MH_BZ;VE_BS_BF;VE_MH_BF;VE_BS_BZ;herkunft;begruendung
+# Lesart: '*' = beliebig, 'a|b' = Alternativen. Die spezifischste Regel gewinnt
+# (typ 4 Punkte, funktion 2, pfad 1). Leere Kriteriumszelle = 0.
+# Herkunft: rekonstruiert (aus Husseini 2025 Anhang A), mehrdeutig, analog, eigene
+# --- Materialbahn ---
+materialbahn;Se;*;3;3;0;0;0;0;0;0;rekonstruiert;Z-Falter K10 Separator: 17,28 = 7 x 2,4684
+materialbahn;An|Ka|El;*;0;0;0;0;3;3;3;3;rekonstruiert;Vereinzelung K2 Elektrodenbahn: 84,00 = 28 x 3
+# --- Wickeln und Handhaben ---
+abwickler;Se;*;3;3;0;0;0;0;0;0;rekonstruiert;Z-Falter K3 Abwickler inkl. Coil: 37,03 = 15 x 2,4684
+abwickler;An|Ka|El;*;0;0;0;0;3;3;3;3;rekonstruiert;Vereinzelung K3 Abwickler inkl. Coil: 54,00 = 18 x 3
+handhabungssystem;Se;*;3;3;3;0;0;0;0;0;eigene;zieht die Bahn ab wie ein Wickler (analog K3) - PG nur wirksam wenn als Traeger gefuehrt
+handhabungssystem;An|Ka|El;*;0;0;3;0;3;3;3;3;eigene;zieht die Elektrodenbahn ab (analog K3) und legt Blaetter ab - PG nur wirksam wenn als Traeger gefuehrt
+falteinheit;Se;*;3;1;0;0;0;0;0;0;eigene;nimmt die Bahn auf wie der Stapeltisch (Z-Falter K2, Bahnanteil 3/1)
+falteinheit;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung der Separatorzeile
+stapeltisch;*;*;3;1;0;3;0;0;0;0;rekonstruiert;Z-Falter K2 Stapeltisch: 44,56 = 20 x 2,2278
+ablegetisch;*;*;0;0;0;3;0;0;0;0;eigene;Traeger der Tischpositionierung, kein Bahnkontakt
+vakuumgreifer;*;*;0;0;1;0;1;1;1;1;mehrdeutig;Z-Falter K26-K29: 1,15 = 13 x 0,0886 bzw. 1,06 = 12 x 0,0886 - Vereinzelung K17-K19: 8,00 = 8 x 1 (andere Zerlegungen moeglich)
+# --- Bahnfuehrung ---
+umlenkrolle;Se;*;3;3;0;0;0;0;0;0;rekonstruiert;Z-Falter K4: 32,09 = 13 x 2,4684 (Paar K19: 4,11 = 5 x 0,8228 mit 1/1)
+umlenkrolle;An|Ka|El;*;0;0;0;0;3;3;3;3;rekonstruiert;Vereinzelung K4 Umlenkrollen: 48,00 = 16 x 3
+messwalze;Se;*;3;3;0;0;0;0;0;0;analog;Rolle im Bahnlauf wie Umlenkrolle K4, zusaetzlich Istwert der Bahnzugregelung
+messwalze;An|Ka|El;*;0;0;0;0;3;3;3;3;rekonstruiert;Vereinzelung K15 Messwalze: 12,00 = 4 x 3
+taenzerwalze;Se;*;3;1;0;0;0;0;0;0;rekonstruiert;Z-Falter K7 Umlenkrolle Taenzer: 23,54 = 12 x 1,9620
+taenzerwalze;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K7
+faltwalze;Se;*;3;3;0;0;0;0;0;0;eigene;zwangsgefuehrte Rolle legt den Bahnweg fest, analog Umlenkrolle K4
+faltwalze;An|Ka|El;*;0;0;0;0;3;3;3;3;eigene;analog Umlenkrolle
+drehrahmen;Se;*;0;3;0;0;0;0;0;0;eigene;Bahnkantenregelung wirkt auf die Bahnfuehrung, analog Stellantrieb K23
+drehrahmen;An|Ka|El;*;0;0;0;0;0;3;3;0;analog;Uebertragung der Separatorzeile
+klemmrolle;*;*;1;0;0;0;0;0;0;0;rekonstruiert;Z-Falter K17/K18 Klemmfinger: 6,27 = 11 x 0,5696
+bahnkantensensor;Se;*;0;1;0;0;0;0;0;0;eigene;Messfehler der Bahnkante wirkt ueber die Regelung auf die Bahnfuehrung
+bahnkantensensor;An|Ka|El;*;0;0;0;0;0;1;1;0;analog;Uebertragung der Separatorzeile
+# --- Antriebstechnik ---
+antrieb;Se;Abwickler;3;1;0;0;0;0;0;0;rekonstruiert;Z-Falter K5 Antrieb Abwickler: 29,43 = 15 x 1,9620
+antrieb;Se;Linearachse;3;1;0;3;0;0;0;0;rekonstruiert;Z-Falter K1 Antrieb Stapeltisch horizontal: 44,56 = 20 x 2,2278 (vertikal K14: 7,52 = 9 x 0,8354 mit 1/0/0/3 - aus dem Graphen nicht unterscheidbar)
+antrieb;Se;*;3;1;0;0;0;0;0;0;analog;wie Antrieb Abwickler K5
+antrieb;An|Ka|El;Abwickler;0;0;0;0;3;3;3;3;rekonstruiert;Vereinzelung K1 Antrieb Abwickler: 84,00 = 28 x 3
+antrieb;An|Ka|El;Linearachse;0;0;0;0;1;1;1;1;eigene;Hubbewegung veraendert Bahnweg und Umschlingung (vgl. Wirkkette W11)
+antrieb;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K5
+riementrieb;Se;*;3;1;0;0;0;0;0;0;rekonstruiert;Z-Falter K9 Riementrieb Abwickler: 17,66 = 9 x 1,9620
+riementrieb;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K9
+spindel;Se;*;1;1;0;3;0;0;0;0;rekonstruiert;Z-Falter K13 Spindel Stapeltisch horizontal: 8,71 = 8 x 1,0886
+spindel;An|Ka|El;*;0;0;0;0;1;1;1;1;eigene;Hubbewegung veraendert Bahnweg (vgl. W11)
+linearfuehrung;Se;Linearachse;1;1;0;3;0;0;0;0;rekonstruiert;Z-Falter K12 Linearfuehrung Stapeltisch: 8,71 = 8 x 1,0886
+linearfuehrung;An|Ka|El;Linearachse;0;0;0;0;1;1;1;1;eigene;Hubbewegung veraendert Bahnweg (vgl. W11)
+linearfuehrung;Se;Taenzer;3;1;0;0;0;0;0;0;analog;wie Mechanischer Hebel Taenzer K8
+linearfuehrung;An|Ka|El;Taenzer;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K8
+linearfuehrung;Se;*;1;1;0;0;0;0;0;0;eigene;Auffangregel ohne erkannte Funktion
+linearfuehrung;An|Ka|El;*;0;0;0;0;1;1;1;1;eigene;Auffangregel ohne erkannte Funktion
+lineareinheit;*;*;0;0;3;0;0;0;0;0;mehrdeutig;Z-Falter K30/K31 Greiferachse: 0,53 = 2 x 0,2658 (B=3) oder 6 x 0,0886 (B=1)
+schwenkarm;Se;*;3;1;0;0;0;0;0;0;rekonstruiert;Z-Falter K8 Mechanischer Hebel Taenzer: 17,66 = 9 x 1,9620
+schwenkarm;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K8
+stellantrieb;Se;*;0;3;0;0;0;0;0;0;mehrdeutig;Z-Falter K23: 1,52 = 2 x 0,7595 (B=3) oder 6 x 0,2532 (B=1)
+stellantrieb;An|Ka|El;*;0;0;0;0;0;3;3;0;analog;Uebertragung der Separatorzeile
+# --- Pneumatik und Vakuum ---
+druckluftzylinder;Se;*;3;1;0;0;0;0;0;0;rekonstruiert;Z-Falter K6 Druckluftzylinder Taenzer: 27,47 = 14 x 1,9620
+druckluftzylinder;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K6 (Z-Falter K39-K42: Stapeln 0 im Elektrodenpfad)
+regelventil;Se;*;3;1;0;0;0;0;0;0;analog;wie Druckluftzylinder K6, stellt dessen Druck ein
+regelventil;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K6
+vakuumerzeuger;*;*;0;0;0;0;0;0;0;0;rekonstruiert;Z-Falter K44-K49: B_ges = 0 (B = 0 oder AS = 0, nicht unterscheidbar)
+# --- Sensorik und Steuerung ---
+drehgeber;Se;*;3;1;0;0;0;0;0;0;rekonstruiert;Z-Falter K11 Drehgeber Taenzer: 11,77 = 6 x 1,9620
+drehgeber;An|Ka|El;*;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K11
+wegaufnehmer;Se;Taenzer;3;1;0;0;0;0;0;0;analog;wie Drehgeber Taenzer K11
+wegaufnehmer;An|Ka|El;Taenzer;0;0;0;0;3;1;1;3;analog;Uebertragung von Z-Falter K11
+wegaufnehmer;Se;Linearachse;1;1;0;3;0;0;0;0;analog;wie Linearfuehrung Stapeltisch K12
+wegaufnehmer;An|Ka|El;Linearachse;0;0;0;0;1;1;1;1;eigene;wie Linearachse im Elektrodenpfad
+wegaufnehmer;Se;*;1;1;0;0;0;0;0;0;eigene;Auffangregel ohne erkannte Funktion
+wegaufnehmer;An|Ka|El;*;0;0;0;0;1;1;1;1;eigene;Auffangregel ohne erkannte Funktion
+regler;Se;*;3;1;0;0;0;0;0;0;eigene;bei Husseini im Antrieb enthalten, hier eigenes Bauteil - wie Antrieb K5
+regler;An|Ka|El;*;0;0;0;0;3;1;1;3;eigene;wie Antrieb im Elektrodenpfad
+# --- intern ---
+rahmen;*;*;0;0;0;0;0;0;0;0;eigene;Starrkoerper (Festlegung)

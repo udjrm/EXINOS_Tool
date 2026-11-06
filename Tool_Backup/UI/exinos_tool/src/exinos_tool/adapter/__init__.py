@@ -1,0 +1,1 @@
+"""Anbindung des Backends. Das Frontend kennt nur Basis und die Adapterfabrik."""

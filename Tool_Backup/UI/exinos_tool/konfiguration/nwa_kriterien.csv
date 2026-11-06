@@ -1,0 +1,9 @@
+zielgroesse;kriterium_id;bezeichnung;rpz;gewicht;traeger_typen;zielpfade;aktiv;quelle
+stapeln;ST_BZ;Beschaedigungen des Separators aufgrund ungenauer Bahnzugregelung;360;;materialbahn;Se;ja;Husseini 2025, Tab. 5-2
+stapeln;ST_BF;Beschaedigungen des Separators aufgrund ungenauer Bahnfuehrung;160;;materialbahn;Se;ja;Husseini 2025, Tab. 5-2
+stapeln;ST_PG;Positioniergenauigkeit der Greifer beim Stapeln zu ungenau;56;;vakuumgreifer;Se;ja;Husseini 2025, Tab. 5-2
+stapeln;ST_PT;Positioniergenauigkeit des Tisches beim Stapeln zu ungenau;56;;stapeltisch|ablegetisch;Se;ja;Husseini 2025, Tab. 5-2
+vereinzelung;VE_MH_BZ;Ungenauigkeiten in der Masshaltigkeit der Elektrodenblaetter aufgrund ungenauer Bahnzugregelung;336;;materialbahn;An|Ka|El;ja;Husseini 2025, Tab. 5-2 - gedruckt 49,84 %, aus RPZ 336/688 = 48,84 % (Druckfehler)
+vereinzelung;VE_BS_BF;Beschaedigungen der Elektrodenblaetter aufgrund ungenauer Bahnfuehrung;160;;materialbahn;An|Ka|El;ja;Husseini 2025, Tab. 5-2
+vereinzelung;VE_MH_BF;Ungenauigkeiten in der Masshaltigkeit der Elektrodenblaetter aufgrund ungenauer Bahnfuehrung;112;;materialbahn;An|Ka|El;ja;Husseini 2025, Tab. 5-2
+vereinzelung;VE_BS_BZ;Beschaedigungen der Elektrodenblaetter aufgrund ungenauer Bahnzugregelung;80;;materialbahn;An|Ka|El;ja;Husseini 2025, Tab. 5-2

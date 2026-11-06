@@ -1,0 +1,48 @@
+id;typ;bezeichnung;materialpfad;baugruppe;gestellfest;bemerkung
+Elektrodenbahn;materialbahn;Elektrodenbahn;El;;;
+Abwickler;abwickler;Abwickler inkl. Coil;El;Abwicklung;ja;Direktantrieb ohne Riementrieb
+Antrieb_Abw;antrieb;Antrieb Abwickler (Rotation);El;Abwicklung;ja;Drehzahlregelung
+Drehrahmen;drehrahmen;Drehrahmen;El;Bahnkantenregelung;ja;nicht im Amesim-Modell; Position angenommen (E3)
+Bahnkantensensor;bahnkantensensor;Bahnkantensensor;El;Bahnkantenregelung;ja;nicht im Amesim-Modell
+Regler_DR;regler;Controller Drehrahmen;El;Bahnkantenregelung;;nicht im Amesim-Modell
+Stellantrieb_DR;stellantrieb;Stellantrieb Drehrahmen;El;Bahnkantenregelung;ja;nicht im Amesim-Modell
+Rolle_1;umlenkrolle;Umlenkrolle 1;El;;ja;
+Rolle_2;umlenkrolle;Umlenkrolle 2;El;;ja;
+Rolle_3;umlenkrolle;Umlenkrolle 3;El;;ja;
+Rolle_4;umlenkrolle;Umlenkrolle 4;El;;ja;
+Rolle_5;umlenkrolle;Umlenkrolle 5;El;;ja;
+Rolle_6;umlenkrolle;Umlenkrolle 6;El;;ja;
+Rolle_7;umlenkrolle;Umlenkrolle 7;El;;ja;
+Messwalze;messwalze;Messwalze;El;;ja;Bahnzugregelung
+Taenzerwalze_1;taenzerwalze;Taenzerwalze 1 Materialspeicher;El;Materialspeicher;nein;
+Taenzerwalze_2;taenzerwalze;Taenzerwalze 2 Materialspeicher;El;Materialspeicher;nein;
+Fuehrung_MS;linearfuehrung;Linearfuehrung Materialspeicher;El;Materialspeicher;ja;inkl. Schlitten
+Zylinder_MS;druckluftzylinder;Druckluftzylinder Materialspeicher;El;Materialspeicher;ja;
+Regelventil_MS;regelventil;Proportional-Regelventil Materialspeicher;El;Materialspeicher;;
+Wegaufnehmer_MS;wegaufnehmer;Wegaufnehmer Materialspeicher;El;Materialspeicher;;
+Handhabung;handhabungssystem;Handhabungssystem inkl. Grundplatte;El;Handhabung;nein;Taktgeber
+Antrieb_Handh;antrieb;Antrieb Handhabungssystem (Rotation);El;Handhabung;ja;
+Riementrieb_Handh;riementrieb;Riementrieb Handhabungssystem (Rotation);El;Handhabung;ja;
+Antrieb_Hub;antrieb;Antrieb Handhabungssystem (vertikal);El;Hubachse;ja;Lageregelung
+Riementrieb_Hub;riementrieb;Riementrieb Handhabungssystem (vertikal);El;Hubachse;ja;
+Spindel_Hub;spindel;Spindel Handhabungssystem (vertikal);El;Hubachse;ja;
+Fuehrung_Hub;linearfuehrung;Linearfuehrung Handhabungssystem (vertikal);El;Hubachse;ja;
+Wegsensor_Hub;wegaufnehmer;Lagemesssystem Hubachse;El;Hubachse;;
+Lineareinheit_VG1;lineareinheit;Lineareinheit Vakuumgreifer 1;El;Greifer_1;nein;nicht im Amesim-Modell (E1)
+Antrieb_VG1;antrieb;Antrieb Vakuumgreifer 1;El;Greifer_1;nein;nicht im Amesim-Modell
+Vakuumgreifer_1;vakuumgreifer;Vakuumgreifer 1;El;Greifer_1;nein;nicht im Amesim-Modell
+Vakuumerzeuger_1;vakuumerzeuger;Vakuumerzeuger 1;El;Greifer_1;ja;nicht im Amesim-Modell
+Lineareinheit_VG2;lineareinheit;Lineareinheit Vakuumgreifer 2;El;Greifer_2;nein;nicht im Amesim-Modell (E1)
+Antrieb_VG2;antrieb;Antrieb Vakuumgreifer 2;El;Greifer_2;nein;nicht im Amesim-Modell
+Vakuumgreifer_2;vakuumgreifer;Vakuumgreifer 2;El;Greifer_2;nein;nicht im Amesim-Modell
+Vakuumerzeuger_2;vakuumerzeuger;Vakuumerzeuger 2;El;Greifer_2;ja;nicht im Amesim-Modell
+Lineareinheit_VG3;lineareinheit;Lineareinheit Vakuumgreifer 3;El;Greifer_3;nein;nicht im Amesim-Modell (E1)
+Antrieb_VG3;antrieb;Antrieb Vakuumgreifer 3;El;Greifer_3;nein;nicht im Amesim-Modell
+Vakuumgreifer_3;vakuumgreifer;Vakuumgreifer 3;El;Greifer_3;nein;nicht im Amesim-Modell
+Vakuumerzeuger_3;vakuumerzeuger;Vakuumerzeuger 3;El;Greifer_3;ja;nicht im Amesim-Modell
+Ablegetisch;ablegetisch;Ablegetisch;El;Ablage;nein;nicht im Amesim-Modell
+Antrieb_AT_h;antrieb;Antrieb Ablegetisch (horizontal);El;Ablage;ja;nicht im Amesim-Modell
+Spindel_AT_h;spindel;Spindel Ablegetisch (horizontal);El;Ablage;ja;nicht im Amesim-Modell
+Fuehrung_AT_h;linearfuehrung;Linearfuehrung Ablegetisch (horizontal);El;Ablage;ja;nicht im Amesim-Modell
+Antrieb_AT_v;antrieb;Antrieb Ablegetisch (vertikal);El;Ablage;ja;nicht im Amesim-Modell
+Spindel_AT_v;spindel;Spindel Ablegetisch (vertikal);El;Ablage;ja;nicht im Amesim-Modell (E5)

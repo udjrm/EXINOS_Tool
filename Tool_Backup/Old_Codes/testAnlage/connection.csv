@@ -1,0 +1,4 @@
+id;von;von_port;nach;nach_port;art;bahn
+V01;Abwickler_1;bahn_aus;Umlenkrolle_1;bahn_ein;bahn;Bahn1
+V02;Antrieb_1;welle_ab;Abwickler_1;welle_an;welle;
+V03;Regler_1;signal_aus;Antrieb_1;istwert;signal;

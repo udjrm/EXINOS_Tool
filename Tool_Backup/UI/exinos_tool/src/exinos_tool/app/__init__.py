@@ -1,0 +1,1 @@
+"""Anwendungsschicht: Zustand, Befehle, Hintergrund und Controller. Ohne Qt."""

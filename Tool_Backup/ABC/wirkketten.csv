@@ -1,0 +1,20 @@
+id;pfad;gewicht;art;regel
+W01;antrieb > riementrieb? > abwickler|handhabungssystem|falteinheit > materialbahn;3;E;Antrieb gibt ueber den Wickler Bahngeschwindigkeit und Bahnzug vor
+W02;antrieb > riementrieb? > abwickler|handhabungssystem|falteinheit > materialbahn > umlenkrolle|messwalze|taenzerwalze|faltwalze|drehrahmen|bahnkantensensor|abwickler|handhabungssystem|falteinheit;1;E;Bahnzugaenderung durch den Antrieb wirkt auf alle Bauteile im Bahnlauf
+W03;riementrieb > abwickler|handhabungssystem|falteinheit > materialbahn;1;E;Elastizitaet und Schlupf des Riemens erzeugen Bahnzugschwankungen
+W04;abwickler > materialbahn > umlenkrolle|messwalze|taenzerwalze|faltwalze|drehrahmen|bahnkantensensor|handhabungssystem|falteinheit;1;E/M;Coil-Unrundheit und Wickeltraegheit wirken ueber die Bahn auf den Bahnlauf
+W05;druckluftzylinder > linearfuehrung|schwenkarm > taenzerwalze > materialbahn;3;E;Zylinderkraft legt die Taenzerkraft und damit den Bahnzug fest
+W06;regelventil > druckluftzylinder > linearfuehrung|schwenkarm > taenzerwalze > materialbahn;3;E;Ventildruck legt ueber Zylinder und Taenzer den Bahnzug fest
+W07;linearfuehrung|schwenkarm > taenzerwalze > materialbahn;1;E;Masse und Reibung der Taenzermechanik wirken auf den Bahnzug
+W08;messwalze|drehgeber > antrieb > riementrieb? > abwickler|handhabungssystem|falteinheit;1;I;Messfehler gehen ueber die Regelung in die Wicklerbewegung ein
+W09;wegaufnehmer > regelventil > druckluftzylinder;1;I;Messfehler gehen ueber das Ventil in die Zylinderkraft ein
+W10;wegaufnehmer > antrieb > riementrieb? > spindel;1;I;Messfehler gehen ueber die Lageregelung in die Achse ein
+W11;antrieb > riementrieb? > spindel > linearfuehrung > handhabungssystem > materialbahn;1;E;Vertikalbewegung der Handhabung veraendert Bahnweg und Umschlingung
+W12;handhabungssystem > antrieb > riementrieb? > spindel|lineareinheit|abwickler;1;I;Taktsignal der Handhabung bestimmt die Bewegung der Folgeachsen
+W13;abwickler > antrieb > riementrieb? > handhabungssystem;1;I;Taktsignal des Abwicklers bestimmt die Bewegung der Handhabung
+W14;bahnkantensensor > regler > stellantrieb;1;I;Messfehler der Bahnkante gehen in die Stellbewegung ein
+W15;regler > stellantrieb > drehrahmen;1;I;Reglerverhalten bestimmt die Stellung des Drehrahmens
+W16;stellantrieb > drehrahmen > materialbahn;1;E;Stellbewegung verschiebt die Bahnlage
+W17;antrieb > lineareinheit > vakuumgreifer;1;E;Antrieb positioniert den Greifer
+W18;vakuumerzeuger > vakuumgreifer > ablegetisch;1;E;Haltekraft beeinflusst die Ablagegenauigkeit
+W19;antrieb > riementrieb? > spindel > linearfuehrung? > ablegetisch;1;E;Antrieb positioniert den Ablegetisch

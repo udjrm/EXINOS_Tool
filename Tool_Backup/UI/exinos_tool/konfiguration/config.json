@@ -1,0 +1,7 @@
+{
+  "backend": {
+    "typ": "workflow",
+    "befehl": ["python", "..\\..\\backend\\workflow.py"],
+    "zeitlimit_s": 600
+  }
+}

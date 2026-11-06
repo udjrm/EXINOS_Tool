@@ -1,0 +1,1 @@
+"""Mock-Backend als eigenstaendiges Programm."""

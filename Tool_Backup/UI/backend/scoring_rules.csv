@@ -1,0 +1,94 @@
+from_type;to_type;domain;weight;art;regel
+abwickler;materialbahn;rope;3;E/M;Abwickler gibt Bahnzug am Ablaufpunkt vor
+materialbahn;abwickler;rope;1;E/M;Rueckwirkung des Bahnzugs auf den Wickel
+materialbahn;umlenkrolle;rope;3;E/M;Bahn treibt frei laufende Rolle an
+umlenkrolle;materialbahn;rope;1;E/M;Rueckwirkung nur ueber Traegheit und Lagerreibung
+materialbahn;messwalze;rope;3;E/M;Bahnzug wird an der Messwalze gemessen
+messwalze;materialbahn;rope;1;E/M;Messwalze wirkt wie Umlenkrolle ueber Traegheit und Reibung
+materialbahn;taenzerwalze;rope;3;E/M;Bahnkraft wirkt auf Taenzerwalze
+taenzerwalze;materialbahn;rope;3;E/M;Speicherweg der Taenzerwalze veraendert Bahnzug
+materialbahn;drehrahmen;rope;3;E/M;Bahn treibt Rollenpaar des Drehrahmens an
+drehrahmen;materialbahn;rope;3;E/M;Drehrahmen lenkt Bahnlage und Bahnweg
+materialbahn;bahnkantensensor;rope;3;E/I;Bahnkante wird gemessen
+bahnkantensensor;materialbahn;rope;0;E;bewusst 0: beruehrungslos ohne Abstuetzung
+handhabungssystem;materialbahn;rope;3;E/M;Handhabung zieht Bahn ab und gibt Geschwindigkeit vor
+materialbahn;handhabungssystem;rope;1;E/M;Rueckwirkung des Bahnzugs
+faltwalze;materialbahn;rope;3;E/M;Faltwalze gibt Bahnweg vor
+materialbahn;faltwalze;rope;1;E/M;Faltwalze zwangsgefuehrt; nur Rueckwirkung ueber Reibung
+falteinheit;materialbahn;rope;3;E/M;Falteinheit nimmt Bahn auf und gibt Bahnweg vor
+materialbahn;falteinheit;rope;1;E/M;Rueckwirkung des Bahnzugs
+antrieb;riementrieb;rotary;3;E;Antrieb gibt Moment vor
+riementrieb;antrieb;rotary;1;E;Lastrueckwirkung auf Antrieb
+antrieb;spindel;rotary;3;E;Antrieb gibt Moment vor
+spindel;antrieb;rotary;1;E;Lastrueckwirkung auf Antrieb
+antrieb;abwickler;rotary;3;E;Direktantrieb des Abwicklers
+abwickler;antrieb;rotary;1;E;Lastrueckwirkung auf Antrieb
+antrieb;handhabungssystem;rotary;3;E;Direktantrieb der Handhabung
+handhabungssystem;antrieb;rotary;1;E;Lastrueckwirkung auf Antrieb
+antrieb;falteinheit;rotary;3;E;Direktantrieb der Falteinheit
+falteinheit;antrieb;rotary;1;E;Lastrueckwirkung auf Antrieb
+antrieb;lineareinheit;rotary;3;E;Antrieb treibt Lineareinheit
+lineareinheit;antrieb;rotary;1;E;Lastrueckwirkung auf Antrieb
+riementrieb;abwickler;rotary;3;E;Kraftschluss zur Spule
+abwickler;riementrieb;rotary;1;E;Lastrueckwirkung
+riementrieb;handhabungssystem;rotary;3;E;Kraftschluss zur Handhabung
+handhabungssystem;riementrieb;rotary;1;E;Lastrueckwirkung
+riementrieb;falteinheit;rotary;3;E;Kraftschluss zur Falteinheit
+falteinheit;riementrieb;rotary;1;E;Lastrueckwirkung
+riementrieb;spindel;rotary;3;E;Riementrieb treibt Spindel
+spindel;riementrieb;rotary;1;E;Lastrueckwirkung
+schwenkarm;taenzerwalze;planar;3;E/R;Schwenkarm legt Lage der Taenzerwalze fest
+taenzerwalze;schwenkarm;planar;3;E/R;Bahnkraft lenkt Schwenkarm aus
+druckluftzylinder;schwenkarm;planar;3;E;Zylinderkraft stellt Taenzerkraft ein
+schwenkarm;druckluftzylinder;planar;1;E;Auslenkung wirkt auf Kolbenweg und Druck
+schwenkarm;drehgeber;planar;3;E/I;Winkel des Schwenkarms wird gemessen
+drehgeber;schwenkarm;planar;0;E;bewusst 0: idealer Sensor
+linearfuehrung;taenzerwalze;planar;3;E/R;Fuehrung legt Lage der Taenzerwalze fest
+taenzerwalze;linearfuehrung;planar;3;E/R;Bahnkraft lenkt Schlitten aus
+druckluftzylinder;linearfuehrung;planar;3;E;Zylinderkraft auf Schlitten
+linearfuehrung;druckluftzylinder;planar;1;E;Auslenkung wirkt auf Kolbenweg und Druck
+linearfuehrung;wegaufnehmer;planar;3;E/I;Schlittenlage wird gemessen
+wegaufnehmer;linearfuehrung;planar;0;E;bewusst 0: idealer Sensor
+spindel;linearfuehrung;planar;3;E/R;Spindel verfaehrt Schlitten
+linearfuehrung;spindel;planar;1;E/R;Reaktionskraft
+linearfuehrung;handhabungssystem;planar;3;R;Fuehrung positioniert Handhabung
+handhabungssystem;linearfuehrung;planar;1;R;Rueckwirkung Masse und Bahnkraft
+handhabungssystem;wegaufnehmer;planar;3;E/I;Lage der Handhabung wird gemessen
+wegaufnehmer;handhabungssystem;planar;0;E;bewusst 0: idealer Sensor
+handhabungssystem;lineareinheit;planar;3;R;Grundplatte traegt und bewegt Lineareinheit
+lineareinheit;handhabungssystem;planar;1;R;Rueckwirkung Masse
+lineareinheit;vakuumgreifer;planar;3;E/R;Lineareinheit positioniert Greifer
+vakuumgreifer;lineareinheit;planar;1;R;Rueckwirkung Masse
+stellantrieb;drehrahmen;planar;3;E;Stellantrieb verschwenkt Drehrahmen
+drehrahmen;stellantrieb;planar;1;E;Reaktionskraft aus dem Bahnzug
+spindel;ablegetisch;planar;3;E/R;Spindel verfaehrt Ablegetisch
+ablegetisch;spindel;planar;1;R;Reaktionskraft
+linearfuehrung;ablegetisch;planar;3;R;Fuehrung legt Lage des Ablegetischs fest
+ablegetisch;linearfuehrung;planar;1;R;Rueckwirkung Masse
+regelventil;druckluftzylinder;pneumatik;3;E;Ventil stellt Zylinderdruck ein
+druckluftzylinder;regelventil;pneumatik;1;E;Rueckwirkung des Zylindervolumens auf den Druck
+vakuumerzeuger;vakuumgreifer;vakuum;3;E;Unterdruck bestimmt Haltekraft
+vakuumgreifer;vakuumerzeuger;vakuum;1;E;Leckage und Volumen wirken auf den Unterdruck
+vakuumgreifer;ablegetisch;material;3;M;Greifer bestimmt Ablageposition des Blatts
+ablegetisch;vakuumgreifer;material;1;M;Stapelhoehe und Lage wirken auf die Uebergabe
+drehgeber;antrieb;control;3;I;Taenzerlage als Regelsignal
+wegaufnehmer;antrieb;control;3;I;Lageistwert
+wegaufnehmer;regelventil;control;3;I;Lage bestimmt Solldruck des Zylinders
+messwalze;antrieb;control;3;I;Bahnzugistwert
+abwickler;antrieb;control;3;I;Wicklersignal als Vorsteuerung bzw. Taktgeber
+handhabungssystem;antrieb;control;3;I;Handhabungssignal als Ist- bzw. Sollwert
+falteinheit;faltwalze;control;3;I;Falteinheit gibt Faltwalzenbewegung vor
+bahnkantensensor;regler;control;3;I;Bahnkantenistwert
+regler;stellantrieb;control;3;I;Stellgroesse des Bahnkantenreglers
+rahmen;*;planar;3;R;Lagefestlegung (nur mit --rahmen)
+*;rahmen;planar;0;R;bewusst 0: Starrkoerper
+stapeltisch;materialbahn;rope;3;Tisch zieht die Bahn ein - analog handhabungssystem
+materialbahn;stapeltisch;rope;1;Rueckwirkung der Bahn auf den Tisch
+linearfuehrung;stapeltisch;planar;3;Fuehrung traegt den Tisch
+stapeltisch;linearfuehrung;planar;1;Rueckwirkung der Last auf die Fuehrung
+stapeltisch;klemmrolle;planar;3;Tisch traegt die Klemmrolle
+klemmrolle;stapeltisch;planar;1;Rueckwirkung der Klemmkraft
+regler;antrieb;control;3;Stellsignal an den Antrieb
+regler;klemmrolle;control;3;Stellsignal an die Klemmrolle
+drehgeber;regler;control;3;Messsignal an die Steuerung
+stapeltisch;regler;control;3;Zustandssignal an die Steuerung

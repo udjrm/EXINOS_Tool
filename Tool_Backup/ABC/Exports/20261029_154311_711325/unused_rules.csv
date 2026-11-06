@@ -1,0 +1,55 @@
+from_type;to_type;domain;weight;regel;status
+*;rahmen;planar;0;bewusst 0: Starrkoerper;andere_anlage
+ablegetisch;linearfuehrung;planar;1;Rueckwirkung Masse;andere_anlage
+ablegetisch;spindel;planar;1;Reaktionskraft;andere_anlage
+ablegetisch;vakuumgreifer;material;1;Stapelhoehe und Lage wirken auf die Uebergabe;andere_anlage
+abwickler;antrieb;rotary;1;Lastrueckwirkung auf Antrieb;typen_vorhanden
+antrieb;abwickler;rotary;3;Direktantrieb des Abwicklers;typen_vorhanden
+antrieb;falteinheit;rotary;3;Direktantrieb der Falteinheit;typen_vorhanden
+antrieb;handhabungssystem;rotary;3;Direktantrieb der Handhabung;typen_vorhanden
+antrieb;lineareinheit;rotary;3;Antrieb treibt Lineareinheit;andere_anlage
+bahnkantensensor;materialbahn;rope;0;bewusst 0: beruehrungslos ohne Abstuetzung;andere_anlage
+bahnkantensensor;regler;control;3;Bahnkantenistwert;andere_anlage
+drehgeber;regler;control;3;;andere_anlage
+drehrahmen;materialbahn;rope;3;Drehrahmen lenkt Bahnlage und Bahnweg;andere_anlage
+drehrahmen;stellantrieb;planar;1;Reaktionskraft aus dem Bahnzug;andere_anlage
+druckluftzylinder;linearfuehrung;planar;3;Zylinderkraft auf Schlitten;typen_vorhanden
+druckluftzylinder;regelventil;pneumatik;1;Rueckwirkung des Zylindervolumens auf den Druck;andere_anlage
+falteinheit;antrieb;rotary;1;Lastrueckwirkung auf Antrieb;typen_vorhanden
+handhabungssystem;antrieb;rotary;1;Lastrueckwirkung auf Antrieb;typen_vorhanden
+handhabungssystem;lineareinheit;planar;3;Grundplatte traegt und bewegt Lineareinheit;andere_anlage
+handhabungssystem;wegaufnehmer;planar;3;Lage der Handhabung wird gemessen;andere_anlage
+klemmrolle;stapeltisch;planar;1;;andere_anlage
+lineareinheit;antrieb;rotary;1;Lastrueckwirkung auf Antrieb;andere_anlage
+lineareinheit;handhabungssystem;planar;1;Rueckwirkung Masse;andere_anlage
+lineareinheit;vakuumgreifer;planar;3;Lineareinheit positioniert Greifer;andere_anlage
+linearfuehrung;ablegetisch;planar;3;Fuehrung legt Lage des Ablegetischs fest;andere_anlage
+linearfuehrung;druckluftzylinder;planar;1;Auslenkung wirkt auf Kolbenweg und Druck;typen_vorhanden
+linearfuehrung;stapeltisch;planar;3;;andere_anlage
+linearfuehrung;taenzerwalze;planar;3;Fuehrung legt Lage der Taenzerwalze fest;typen_vorhanden
+linearfuehrung;wegaufnehmer;planar;3;Schlittenlage wird gemessen;andere_anlage
+materialbahn;bahnkantensensor;rope;3;Bahnkante wird gemessen;andere_anlage
+materialbahn;drehrahmen;rope;3;Bahn treibt Rollenpaar des Drehrahmens an;andere_anlage
+materialbahn;stapeltisch;rope;1;;andere_anlage
+rahmen;*;planar;3;Lagefestlegung (nur mit --rahmen);andere_anlage
+regelventil;druckluftzylinder;pneumatik;3;Ventil stellt Zylinderdruck ein;andere_anlage
+regler;antrieb;control;3;;andere_anlage
+regler;klemmrolle;control;3;;andere_anlage
+regler;stellantrieb;control;3;Stellgroesse des Bahnkantenreglers;andere_anlage
+riementrieb;spindel;rotary;3;Riementrieb treibt Spindel;typen_vorhanden
+spindel;ablegetisch;planar;3;Spindel verfaehrt Ablegetisch;andere_anlage
+spindel;riementrieb;rotary;1;Lastrueckwirkung;typen_vorhanden
+stapeltisch;klemmrolle;planar;3;;andere_anlage
+stapeltisch;linearfuehrung;planar;1;;andere_anlage
+stapeltisch;materialbahn;rope;3;;andere_anlage
+stapeltisch;regler;control;3;;andere_anlage
+stellantrieb;drehrahmen;planar;3;Stellantrieb verschwenkt Drehrahmen;andere_anlage
+taenzerwalze;linearfuehrung;planar;3;Bahnkraft lenkt Schlitten aus;typen_vorhanden
+vakuumerzeuger;vakuumgreifer;vakuum;3;Unterdruck bestimmt Haltekraft;andere_anlage
+vakuumgreifer;ablegetisch;material;3;Greifer bestimmt Ablageposition des Blatts;andere_anlage
+vakuumgreifer;lineareinheit;planar;1;Rueckwirkung Masse;andere_anlage
+vakuumgreifer;vakuumerzeuger;vakuum;1;Leckage und Volumen wirken auf den Unterdruck;andere_anlage
+wegaufnehmer;antrieb;control;3;Lageistwert;andere_anlage
+wegaufnehmer;handhabungssystem;planar;0;bewusst 0: idealer Sensor;andere_anlage
+wegaufnehmer;linearfuehrung;planar;0;bewusst 0: idealer Sensor;andere_anlage
+wegaufnehmer;regelventil;control;3;Lage bestimmt Solldruck des Zylinders;andere_anlage
